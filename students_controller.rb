@@ -30,8 +30,12 @@ post '/students' do
     erb(:create)
 end
 
-# edit
+# edit, get
+get '/students/:id/edit' do
+    @student = Student.find( params[:id])
+    erb(:edit)
+end
 
-# update
+# update, post
 
-# destroy
+# destroy, post
